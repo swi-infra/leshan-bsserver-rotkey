@@ -2,19 +2,19 @@
 A very simple LWM2M bootstrap server used to test key rotation.
 
 # Build & Run
-Build the test server with : 
+Build the test server with :
 
 ```
 mvn clean install
 ```
-Then to run it : 
+Then to run it :
 
 ```
-java -jar target/leshan-bsserver-rotkey-0.0.1-SNAPSHOT-jar-with-dependencies.jar  
+java -jar target/leshan-bsserver-rotkey-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-# Output 
-Logs should help you to see what happened, e.g :  
+# Output
+Logs should help you to see what happened, e.g :
 ```
 2021-02-03 16:13:57,576 INFO LeshanBootstrapServer - Bootstrap server started at coap://0.0.0.0/0.0.0.0:5683 coaps://0.0.0.0/0.0.0.0:5684
 2021-02-03 16:14:10,886 INFO RotKeyServer$1 - Device try to connect using 'identity1' identity. (PSK expected 'AAAA')
@@ -31,7 +31,7 @@ Logs should help you to see what happened, e.g :
 2021-02-03 16:24:03,696 INFO RotKeyServer$2 - Try to apply new credentials 'identity3','CCCC'
 ```
 
-# Need to change default config 
+# Need to change default config
 Config is hardcoded, change code directly. See [RotKeyServer](./src/main/java/org/eclipse/leshan/bsserver/rotkey/RotKeyServer.java)
 
 # Need more logs
