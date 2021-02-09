@@ -120,11 +120,6 @@ public class RotKeyServer {
             }
 
             public List<SecurityInfo> getAllByEndpoint(String receivedEndpoint) {
-                // We support only one endpoint name.
-                if (!receivedEndpoint.equals(deviceEndpointName)) {
-                    LOG.info("Unexpected endpoint name, received {} expected {}", receivedEndpoint, deviceEndpointName);
-                    return null;
-                }
                 return credentials;
             }
         });
@@ -137,12 +132,6 @@ public class RotKeyServer {
             private int keyIndex = 0; // index used to rotate keys
 
             public BootstrapConfig get(String endpoint, Identity deviceIdentity, BootstrapSession session) {
-                // We support only one endpoint name.
-                if (!endpoint.equals(deviceEndpointName)) {
-                    LOG.info("No bootstrap config for {}, endpoint name should be {}", endpoint, deviceEndpointName);
-                    return null;
-                }
-
                 // Rotate keys.
                 keyIndex = (keyIndex + 1) % credentials.size();
 
