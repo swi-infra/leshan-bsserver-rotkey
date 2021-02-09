@@ -11,7 +11,7 @@
         <appender-ref ref="STDOUT" />
     </root>
 
-    <logger name="org.eclipse.leshan" level="INFO" />
+    <logger name="org.eclipse.leshan" level="DEBUG" />
     <logger
         name="org.eclipse.leshan.core.californium.LwM2mCoapResource"
         level="DEBUG" />

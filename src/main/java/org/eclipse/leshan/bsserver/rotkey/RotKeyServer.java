@@ -164,7 +164,7 @@ public class RotKeyServer {
                 dmSecurity.secretKey = Hex.decodeHex("1234567890".toCharArray());
                 dmSecurity.securityMode = SecurityMode.PSK;
                 // use Leshan Sandbox as LWM2M server
-                dmSecurity.uri = "coaps://leshan.eclipseprojects.io:5784";
+                dmSecurity.uri = "coaps://leshan.eclipseprojects.io:5684";
                 dmSecurity.serverId = 123;
                 config.security.put(1, dmSecurity);
                 BootstrapConfig.ServerConfig dmServer = new BootstrapConfig.ServerConfig();
@@ -172,7 +172,6 @@ public class RotKeyServer {
                 dmServer.shortId = 123;
                 dmServer.lifetime = 300; // 5min
                 config.servers.put(0, dmServer);
-
 
                 try {
                     checker.verify(config);
