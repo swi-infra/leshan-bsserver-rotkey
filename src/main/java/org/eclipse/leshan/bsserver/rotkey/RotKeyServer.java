@@ -159,7 +159,7 @@ public class RotKeyServer {
                 BootstrapConfig.ServerSecurity dmSecurity = new BootstrapConfig.ServerSecurity();
                 dmSecurity.bootstrapServer = false;
                 // PSK Identity for LWM2M server
-                dmSecurity.publicKeyOrId = "invalidIdentityToForceRebootstrap".getBytes();
+                dmSecurity.publicKeyOrId = "invaliddmpublickey".getBytes();
                 // PSK Key for LWM2M server
                 dmSecurity.secretKey = Hex.decodeHex("1234567890".toCharArray());
                 dmSecurity.securityMode = SecurityMode.PSK;
